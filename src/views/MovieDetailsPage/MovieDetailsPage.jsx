@@ -17,7 +17,7 @@ const MovieDetail = lazy(() => import('./MovieDetail/MovieDetail.jsx'));
 
 const MovieDetailsPage = () => {
   const location = useLocation();
-  const history = useNavigate();
+  const navigate = useNavigate();
   const { path } = useMatch();
   const { slug } = useParams();
   const movieId = slug.match(/[a-z0-9]+$/)[0];
@@ -34,10 +34,10 @@ const MovieDetailsPage = () => {
   const onBackClick = () => {
     if (location && location.state && location.state.from) {
       const { pathname, search } = location.state.from;
-      history.push(`${pathname}${search}`);
+      navigate.push(`${pathname}${search}`);
       return;
     }
-    history.push(`/`);
+    navigate.push(`/`);
   };
 
   return (
