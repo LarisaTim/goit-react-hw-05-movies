@@ -2,12 +2,12 @@ import { useState, useEffect, Suspense, lazy } from 'react';
 import {
   useParams,
   Route,
-  useRouteMatch,
+  useMatch,
   useLocation,
-  useHistory,
+  useNavigate,
 } from 'react-router-dom';
-import { LineWave} from 'react-loader-spinner';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import{ LineWave} from 'react-loader-spinner';
+// import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { fetchMovies } from '../../service/api';
 
 const Reviews = lazy(() => import('../../component/Reviews/Reviews.jsx'));
@@ -17,8 +17,8 @@ const MovieDetail = lazy(() => import('./MovieDetail/MovieDetail.jsx'));
 
 const MovieDetailsPage = () => {
   const location = useLocation();
-  const history = useHistory();
-  const { path } = useRouteMatch();
+  const history = useNavigate();
+  const { path } = useMatch();
   const { slug } = useParams();
   const movieId = slug.match(/[a-z0-9]+$/)[0];
   const [movie, setMovie] = useState(null);

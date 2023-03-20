@@ -1,10 +1,10 @@
-import { NavLink, useRouteMatch } from 'react-router-dom';
+import { NavLink,  useMatch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import noFoto from '../../../images/nofoto.jpg';
 import s from './MovieDetail.module.css';
 
 export default function MovieDetails({ movie }) {
-  const { url } = useRouteMatch();
+  const { url } =  useMatch()
   return (
     <div className={s.movie}>
       <div className={s.imageBox}>

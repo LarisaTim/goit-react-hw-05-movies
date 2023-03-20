@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import {LineWave} from 'react-loader-spinner';
 
@@ -21,15 +21,12 @@ function App() {
       {' '}
       <Suspense fallback={<LineWave/>}>
         <Navigation />
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/movies" exact component={MoviesPage} />
-          <Route path="/movies/:slug" component={MovieDetailsPage} />
-          <Route>
-            <NotFoundView />
-          </Route>
-          <Redirect to="/" />
-        </Switch>
+        <Routes>
+          <Route path="/"  element={HomePage} />
+          <Route path="/movies" element={MoviesPage} />
+          <Route path="/movies/:slug" element={MovieDetailsPage} />
+          <Route path="*" element={ <NotFoundView />} />
+        </Routes>
         <ToastContainer />
       </Suspense>
     </div>

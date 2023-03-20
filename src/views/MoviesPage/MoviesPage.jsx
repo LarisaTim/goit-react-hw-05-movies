@@ -2,18 +2,18 @@ import React from "react";
 import { useState, useEffect } from "react";
 import {
   useLocation,
-  useHistory,
-} from "react-router-dom/cjs/react-router-dom.min";
+ useNavigate
+} from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import {LineWave} from "react-loader-spinner";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Form from "../../component/Form/Form";
 import { fetchMovies } from "../../service/api";
 import Movies from "../../component/Movies/Movies";
 
 export default function MoviesPage() {
   const location = useLocation();
-  const history = useHistory();
+  const history = useNavigate();
   const [query, setQuery] = useState(null);
   const [page, setPage] = useState(1);
   const [movies, setMovies] = useState(null);
