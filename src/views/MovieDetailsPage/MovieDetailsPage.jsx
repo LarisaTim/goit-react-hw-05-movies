@@ -6,7 +6,7 @@ import {
   useLocation,
   useHistory,
 } from 'react-router-dom';
-import Loader from 'react-loader-spinner';
+import { LineWave} from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { fetchMovies } from '../../service/api';
 
@@ -42,7 +42,7 @@ const MovieDetailsPage = () => {
 
   return (
     <>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<LineWave />}>
         <Button onBackClick={onBackClick}  />
 
         {movie && <MovieDetail movie={movie} />}

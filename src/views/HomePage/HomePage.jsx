@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchMovies } from '../../service/api';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import Loader from 'react-loader-spinner';
+import {LineWave} from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Movies from '../../component/Movies/Movies';
 
@@ -28,13 +28,18 @@ export default function HomePage() {
           hasMore={true}
           style={{ textAlign: 'center' }}
           loader={
-            <Loader
-              type="Puff"
-              color="#00BFFF"
-              height={100}
-              width={100}
-              timeout={3000}
-            />
+          <LineWave
+  height="100"
+  width="100"
+  color="#4fa94d"
+  ariaLabel="line-wave"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  firstLineColor=""
+  middleLineColor=""
+  lastLineColor=""
+/>
           }
         >
           {''}

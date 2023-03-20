@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import Loader from 'react-loader-spinner';
+import {LineWave} from 'react-loader-spinner';
 
 const HomePage = lazy(() => import('../../views/HomePage/HomePage.jsx'));
 const MovieDetailsPage = lazy(() =>
@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       {' '}
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<LineWave/>}>
         <Navigation />
         <Switch>
           <Route path="/" exact component={HomePage} />
