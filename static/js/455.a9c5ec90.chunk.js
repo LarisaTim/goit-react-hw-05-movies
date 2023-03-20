@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_05_movies=self.webpackChunkgoit_react_hw_05_movies||[]).push([[455],{7455:function(t,n,c){c.r(n),c.d(n,{default:function(){return _}});c(2791);var e="Button_box_button__XfyGz",o="Button_button__3iaQG",u=c(184),_=function(t){var n=t.onBackClick;return(0,u.jsx)("div",{className:e,children:(0,u.jsx)("button",{className:o,onClick:n,children:"Back"})})}}}]);
+//# sourceMappingURL=455.a9c5ec90.chunk.js.map
