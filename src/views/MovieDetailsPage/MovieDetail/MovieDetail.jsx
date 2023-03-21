@@ -46,8 +46,8 @@ export default function MovieDetails({ movie }) {
           <ul className={s.additional}>
             <li className={s.additionalItem}>
               <NavLink
-                className={s.link}
-                activeClassName={s.activeLink}
+               className={({ isActive }) =>
+          isActive ? s.activeLink : s.link}
                 to={`${url}/cast`}
               >
                 Cast
@@ -55,8 +55,8 @@ export default function MovieDetails({ movie }) {
             </li>
             <li className={s.additionalItem}>
               <NavLink
-                className={s.link}
-                activeClassName={s.activeLink}
+                className={({ isActive }) =>
+          isActive ? s.activeLink : s.link}
                 to={`${url}/reviews`}
               >
                 Reviews

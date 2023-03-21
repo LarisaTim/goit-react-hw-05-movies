@@ -5,10 +5,12 @@
   font-weight: 500;
   color: #d3dee2;
   font-size: 26px;
+ 
 }
 
 .activeLink {
   color: #2196f3;
+  font-size: 26px;
 }
 .header {
   display: flex;
