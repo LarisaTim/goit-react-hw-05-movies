@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import {LineWave} from 'react-loader-spinner';
 
-const HomePage = lazy(() => import('../../views/HomePage/HomePage.jsx'));
+const HomePage = lazy(() => import('../../views/HomePage/HomePage'));
 const MovieDetailsPage = lazy(() =>
   import('../../views/MovieDetailsPage/MovieDetailsPage.jsx'),
 );

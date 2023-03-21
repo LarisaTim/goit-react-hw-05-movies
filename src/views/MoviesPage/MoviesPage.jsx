@@ -1,9 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import {
-  useLocation,
- useNavigate
-} from "react-router-dom";
+import {  useLocation, useNavigate} from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import {LineWave} from "react-loader-spinner";
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";

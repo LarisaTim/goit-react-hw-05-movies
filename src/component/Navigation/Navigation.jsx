@@ -5,7 +5,7 @@ const Navigation = () => (
   <header className={s.header}>
     <nav  >
       <Outlet/>
-      <NavLink exact to="/" className={({ isActive }) =>
+      <NavLink  to="/" className={({ isActive }) =>
           isActive ? s.activeLink : s.link}>
         Home
       </NavLink>
