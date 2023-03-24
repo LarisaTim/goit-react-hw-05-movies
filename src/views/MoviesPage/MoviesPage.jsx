@@ -9,7 +9,7 @@ import Movies from "../../component/Movies/Movies";
 
 export default function MoviesPage() {
   const location = useLocation();
-  const history = useNavigate();
+  const navigate = useNavigate();
   const [query, setQuery] = useState(null);
   const [page, setPage] = useState(1);
   const [movies, setMovies] = useState(null);
@@ -31,7 +31,7 @@ export default function MoviesPage() {
   const onFormSubmit = (query) => {
     setQuery(query);
     setPage(1);
-    history.push({ ...location, search: `query=${query}` });
+    navigate({ ...location, search: `query=${query}` });
   };
 
   return (
