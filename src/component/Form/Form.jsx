@@ -1,5 +1,4 @@
-// import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { FiSearch } from "react-icons/fi";
 import { toast } from "react-toastify";
@@ -7,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import s from "./Form.module.css";
 
 const Form = ({ onSubmit }) => {
-  const [query, setQuery] = useSearchParams("");
+  const [query, setQuery] = useState("");
 
   const handleNameChange = (evt) => {
     setQuery(evt.currentTarget.value.toLowerCase());

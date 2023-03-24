@@ -22,9 +22,9 @@ function App() {
       <Suspense fallback={<LineWave/>}>
         <Navigation />
         <Routes>
-          <Route path="/"  element={HomePage} />
-          <Route path="movies" element={MoviesPage} />
-          <Route path="movies/:slug" element={MovieDetailsPage} />
+          <Route path="/"  element={<HomePage/>} />
+          <Route path="movies" element={<MoviesPage />} />
+          <Route path="movies/:slug" element={<MovieDetailsPage />} />
           <Route path="*" element={ <NotFoundView />} />
         </Routes>
         <ToastContainer />

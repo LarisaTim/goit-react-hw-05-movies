@@ -1,10 +1,10 @@
-import { NavLink, Outlet} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import s from "./Navigation.module.css";
 
 const Navigation = () => (
   <header className={s.header}>
-    <nav  >
-      <Outlet/>
+    <nav>
+   
       <NavLink  to="/" className={({ isActive }) =>
           isActive ? s.activeLink : s.link}>
         Home

@@ -27,10 +27,10 @@ const MovieDetailsPage = () => {
     const asyncFetch = async () => {
       const movie = await fetchMovies(`movie/${movieId}`);
       setMovie(movie);
-    };
+    }; 
     asyncFetch();
   }, [movieId]);
-
+ 
   const onBackClick = () => {
     if (location && location.state && location.state.from) {
       const { pathname, search } = location.state.from;
