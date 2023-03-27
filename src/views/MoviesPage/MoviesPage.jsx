@@ -31,7 +31,7 @@ export default function MoviesPage() {
   const onFormSubmit = (query) => {
     setQuery(query);
     setPage(1);
-    navigate({ ...location, search: `query=${query}` });
+    navigate.push({ ...location, search: `query=${query}` });
   };
 
   return (

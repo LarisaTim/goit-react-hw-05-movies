@@ -7,9 +7,11 @@ import "react-toastify/dist/ReactToastify.css";
 import s from "./Form.module.css";
 
 const Form = ({ onSubmit }) => {
-  const [searchParams, setSearchParams] = useSearchParams("");
-
-  const handleNameChange = (evt) => {
+const [searchParams, setSearchParams] = useSearchParams("");
+const movieId = searchParams.get ("movieId")
+ 
+ 
+  const handleNameChange =(evt) => {
    setSearchParams(evt.target.value.toLowerCase());
   };
 
@@ -20,7 +22,6 @@ const Form = ({ onSubmit }) => {
       toast.warning("Enter searcher");
       return;
     }
-
     onSubmit(searchParams);
     setSearchParams("");
   };
@@ -33,7 +34,7 @@ const Form = ({ onSubmit }) => {
         name="query"
         autoComplete="off"
         placeholder="Search movies"
-        value={searchParams}
+        value={movieId}
         onChange={handleNameChange}
       />
       <button type="submit" className={s.searchFormButton} aria-label="search">

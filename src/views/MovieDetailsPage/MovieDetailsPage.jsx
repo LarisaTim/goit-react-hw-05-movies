@@ -22,7 +22,7 @@ const MovieDetailsPage = () => {
   const { slug } = useParams();
   const movieId = slug.match(/[a-z0-9]+$/)[0];
   const [movie, setMovie] = useState(null);
-
+  
   useEffect(() => {
     const asyncFetch = async () => {
       const movie = await fetchMovies(`movie/${movieId}`);
@@ -43,7 +43,7 @@ const MovieDetailsPage = () => {
   return (
     <>
       <Suspense fallback={<LineWave />}>
-        <Button onBackClick={onBackClick}  />
+        <Button onBackClick={onBackClick}/>
 
         {movie && <MovieDetail movie={movie} />}
 
