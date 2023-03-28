@@ -1,4 +1,4 @@
-// import { useState } from "react";
+
 import { useSearchParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import { FiSearch } from "react-icons/fi";
@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import s from "./Form.module.css";
 
 const Form = ({ onSubmit }) => {
-const [searchParams, setSearchParams] = useSearchParams("");
+const [searchParams, setSearchParams] = useSearchParams();
 const movieId = searchParams.get ("movieId")
  
  

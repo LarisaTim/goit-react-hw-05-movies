@@ -19,7 +19,7 @@ const MovieDetailsPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { path } = useMatch();
-  const { slug } = useParams();
+  const{ slug  }= useParams();
   const movieId = slug.match(/[a-z0-9]+$/)[0];
   const [movie, setMovie] = useState(null);
   

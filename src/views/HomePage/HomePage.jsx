@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { fetchMovies } from '../../service/api';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import {LineWave} from 'react-loader-spinner';
-// import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Movies from '../../component/Movies/Movies';
 
 export default function HomePage() {
