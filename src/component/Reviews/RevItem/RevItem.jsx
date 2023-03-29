@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import s from '../Reviews.module.css';
 import img from '../../../images/nofoto.jpg';
 
@@ -23,8 +23,8 @@ export default function RevItem({ reviews }) {
     </li>
   );
 }
-RevItem.propTypes = {
-  reviews: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-  }),
-};
+// RevItem.propTypes = {
+//   reviews: PropTypes.shape({
+//     id: PropTypes.number.isRequired,
+//   }),
+// };
