@@ -1,6 +1,6 @@
 import { useState, useEffect, Suspense, lazy } from 'react';
 import {
-  useParams,
+  useParams,Link,
   Outlet,
   useLocation,
   useNavigate,
@@ -30,15 +30,17 @@ const MovieDetailsPage = () => {
   const onBackClick = () => {
     if (location && location.state && location.state.from) {
       const { pathname, search } = location.state.from;
-      navigate.push(`${pathname}${search}`);
+      navigate(`${pathname}${search}`);
       return;
     }
-    navigate.push(`/`);
+    navigate(`/`);
   };
 
   return (
     <>
-      <Button onBackClick={onBackClick} />
+      <Link to="/" >
+        <Button onBackClick={onBackClick} />
+        </Link>
      {movie && <MovieDetail movie={movie} />}
      <Suspense fallback={<LineWave />}>
         <Outlet />

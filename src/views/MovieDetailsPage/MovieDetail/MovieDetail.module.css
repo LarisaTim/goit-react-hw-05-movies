@@ -94,7 +94,7 @@
 .link {
   display: block;
   text-align: center;
-  font-size: 25px;
+  font-size: 26px;
   padding: 10px;
   border-radius: 5px;
   width: 100px;
@@ -112,4 +112,11 @@
 
 .activeLink {
   background-color: #4d2e5a;
-}
+  color: #2196f3;
+  font-size: 26px;
+  width: 100px;
+  padding: 10px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    }

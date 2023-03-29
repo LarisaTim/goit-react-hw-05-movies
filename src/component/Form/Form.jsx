@@ -8,7 +8,7 @@ import s from "./Form.module.css";
 
 const Form = ({ onSubmit }) => {
 const [searchParams, setSearchParams] = useSearchParams();
-  const query = searchParams.get("query") ?? "";
+const query = searchParams.get("query") ?? "";
  
  
   const handleNameChange = (evt) => {
