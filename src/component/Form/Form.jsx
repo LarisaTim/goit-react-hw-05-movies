@@ -8,11 +8,12 @@ import s from "./Form.module.css";
 
 const Form = ({ onSubmit }) => {
 const [searchParams, setSearchParams] = useSearchParams();
-const movieId = searchParams.get ("movieId")
+  const query = searchParams.get("query") ?? "";
  
  
-  const handleNameChange =(evt) => {
-   setSearchParams(evt.target.value.toLowerCase());
+  const handleNameChange = (evt) => {
+  const query = evt.target.value.toLowerCase();
+   setSearchParams( query?{ query}:{});
   };
 
   const handleSubmit = (evt) => {
@@ -22,7 +23,7 @@ const movieId = searchParams.get ("movieId")
       toast.warning("Enter searcher");
       return;
     }
-    onSubmit(searchParams);
+    onSubmit( query);
     setSearchParams("");
   };
 
@@ -34,7 +35,7 @@ const movieId = searchParams.get ("movieId")
         name="query"
         autoComplete="off"
         placeholder="Search movies"
-        value={movieId}
+        value={ query}
         onChange={handleNameChange}
       />
       <button type="submit" className={s.searchFormButton} aria-label="search">

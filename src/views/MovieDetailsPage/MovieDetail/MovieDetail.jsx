@@ -1,10 +1,10 @@
-import { NavLink,  useMatch } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import noFoto from '../../../images/nofoto.jpg';
 import s from './MovieDetail.module.css';
 
 export default function MovieDetails({ movie }) {
-  const { url } =  useMatch()
+ 
   return (
     <div className={s.movie}>
       <div className={s.imageBox}>
@@ -45,19 +45,17 @@ export default function MovieDetails({ movie }) {
         <div className={s.infoMore}>
           <ul className={s.additional}>
             <li className={s.additionalItem}>
-              <NavLink
-               className={({ isActive }) =>
-          isActive ? s.activeLink : s.link}
-                to={`${url}/cast`}
+            <NavLink
+                className={({ isActive }) => (isActive ? s.activeLink : s.link)}
+                to="cast"
               >
                 Cast
               </NavLink>
             </li>
             <li className={s.additionalItem}>
               <NavLink
-                className={({ isActive }) =>
-          isActive ? s.activeLink : s.link}
-                to={`${url}/reviews`}
+                className={({ isActive }) => (isActive ? s.activeLink : s.link)}
+                to="reviews"
               >
                 Reviews
               </NavLink>
@@ -69,8 +67,11 @@ export default function MovieDetails({ movie }) {
   );
 }
 
+
+ 
 MovieDetails.propTypes = {
   movie: PropTypes.shape({
     id: PropTypes.number.isRequired,
   }),
 };
+  
