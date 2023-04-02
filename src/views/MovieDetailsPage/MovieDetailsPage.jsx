@@ -33,7 +33,7 @@ const MovieDetailsPage = () => {
       navigate(`${pathname}${search}`);
       return;
     }
-    navigate(`/`);
+    navigate(-1);
   };
 
   return (
